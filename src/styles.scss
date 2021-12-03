@@ -5,14 +5,16 @@
 @use "igniteui-angular/theming" as *;
 
 @include igx-core();
-@include igx-typography();
+@include igx-typography($font-family: "Open Sans", $type-scale: $fluent-type-scale);
 
 $custom-palette: igx-palette(
-  $primary: #09f,
-  $secondary: #72da67,
-  $surface: #222222,
-  $grays: #FFFFFF);
-@include igx-theme($palette: $custom-palette, $schema: $dark-material-schema);
+  $primary: #2b579a,
+  $secondary: #2b579a,
+  $error: #a80000,
+  $success: #107c10,
+  $warn: #797673,
+  $variant: 'fluent');
+@include igx-theme($palette: $custom-palette, $schema: $light-fluent-schema);
 
 body {
   background: hsla(var(--igx-surface-500));
